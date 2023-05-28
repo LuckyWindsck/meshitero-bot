@@ -1,5 +1,7 @@
 # 飯テロボット
 
+「#飯テロ」のツイートを評価する Twitter bot
+
 - `README.md`
   - このファイル
 - `Pipfile`
@@ -29,7 +31,7 @@
 - `meshitero_bot.py`
   - 飯テロボット(main)
 
-# コードの流れ
+## コードの流れ
 1. `.env` から認証するための環境変数を読み込む
 ```
     load_dotenv()
@@ -137,7 +139,7 @@
     self.rest_time = max(0, self.max_request_frequency - retweets_count)
 ```
 
-# 単純ベイズ分類器
+## 単純ベイズ分類器
 分類器は文書をカテゴリに分類することができる。
 
 カテゴリの例
@@ -213,4 +215,4 @@ default_classifier = Classifier([good, poor])
         return log_bayes_prob
 ```
 
-# 終わり
+## 終わり
